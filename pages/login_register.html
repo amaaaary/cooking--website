@@ -23,6 +23,27 @@
     </nav>
 </header>
     <h1>محتوى صفحة (اسم الصفحة)</h1>
+    <div class="login-container">
+        <h2>تسجيل دخول</h2>
+        <input type="text" id="nameInput" placeholder="أدخل اسمك">
+        <input type="email" id="emailInput" placeholder="أدخل بريدك الإلكتروني">
+        <button onclick="login()">دخول</button>
+    </div>
+
+    <script>
+        function login() {
+            const name = document.getElementById('nameInput').value;
+            const email = document.getElementById('emailInput').value;
+
+            if (name && email) {
+                localStorage.setItem('userName', name);
+                localStorage.setItem('userEmail', email);
+                window.location.href = "profile.html";
+            } else {
+                alert("برجاء إدخال البيانات");
+            }
+        }
+    </script>
     
 
        <script src="script.js"></script>
