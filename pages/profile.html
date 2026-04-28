@@ -23,7 +23,33 @@
     </nav>
 </header>
     <h1>محتوى صفحة (اسم الصفحة)</h1>
-    
+    <div class="profile-box">
+        <h1>مرحباً بك</h1>
+        <div class="user-info">
+            <p>الاسم: <span id="p-name"></span></p>
+            <p>الإيميل: <span id="p-email"></span></p>
+        </div>
+        <button class="logout-btn" onclick="logout()">خروج</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const name = localStorage.getItem('userName');
+            const email = localStorage.getItem('userEmail');
+
+            if (name && email) {
+                document.getElementById('p-name').innerText = name;
+                document.getElementById('p-email').innerText = email;
+            } else {
+                window.location.href = "login_register.html";
+            }
+        };
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = "login_register.html";
+        }
+    </script>
 
        <script src="script.js"></script>
     </body>
