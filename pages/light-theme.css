@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    background: url("../images/a.jpeg") no-repeat center center/cover;
-    font-family: Arial, sans-serif;
-}
-
 header {
     background: rgba(30, 30, 47, 0.9);
     color: white;
@@ -70,6 +65,12 @@ nav ul li a.active {
     border-radius: 12px;
     text-align: center;
     color: white;
+    background: url("../images/a.jpeg") no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
 }
 
 .welcome-box h1 {
