@@ -85,3 +85,8 @@ nav ul li a.active {
 body {     background: url("../images/a.jpeg") no-repeat center center fixed; 
            background-size: cover;
            min-height: 100vh;}
+footer { background-color:rgba(30, 30, 47, 0.9);
+        text-align: center;
+        bottom: 0;
+        width: 100%; 
+        padding: 10px;}
