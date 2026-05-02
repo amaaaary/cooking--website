@@ -15,6 +15,7 @@
     margin-left:35% ; 
     margin-right: auto;
     margin-top: 100px;
+    diplay: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.6) ;
@@ -23,9 +24,10 @@
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
     padding: 40px; }
-    #nameInput {border: 1px solid black; border-radius: 6px;}
+    #nameInput {border: 1px solid black; border-radius: 6px; width: 80%; padding:12px; font-size:20px}
+    #emailInput {border: 1px solid black; border-radius: 6px;}
     button:hover { background-color:  #ffcc00;}
-    button { width: 50%; padding: 10px; font-size: 15px; color:bisque; border: none; border-radius:8px ; margin-top: 8px;}
+    #go { width: 50%; padding: 10px; font-size: 15px; color:black; border: none; border-radius:8px ; margin-top: 8px;}
     </style>
 </head>
 <body>
@@ -49,7 +51,7 @@
         <h2>تسجيل دخول</h2>
         <input type="text" id="nameInput" placeholder="أدخل اسمك">
         <input type="email" id="emailInput" placeholder="أدخل بريدك الإلكتروني">
-        <button onclick="login()">دخول</button>
+        <button id="go" onclick="login()">دخول</button>
     </div>
 
     <script>
