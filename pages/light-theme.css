@@ -82,3 +82,6 @@ nav ul li a.active {
 .welcome-box p {
     color: #ddd;
 }
+body {     background: url("../images/a.jpeg") no-repeat center center fixed; 
+           background-size: cover;
+           min-height: 100vh;}
