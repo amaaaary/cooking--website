@@ -1,16 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>معرض السيارات - (اكتب اسم الصفحة هنا)</title>
-    <link id="theme-link" rel="stylesheet" href="light-theme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.folder/recipe.css">
+    <title>Document</title>
+
+
+
+<style>
+/* 1. تنسيق صورة الخلفية فقط - عشان متأثرش على باقي الصور */
+
+
+/* 2. حاوية الجريد الأساسية */
+.line1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    width: 90%; /* يفضل نسبة مئوية عشان الـ Responsiveness */
+    max-width: 1200px;
+    margin: 50px auto; /* لتوسيط الحاوية في نص الصفحة */
+    padding: 20px;
+}
+
+/* 3. تنسيق الكروت (الـ Divs البيضاء) */
+.recipe1, .recipe2, .recipe3 {
+    background-color: rgba(255, 255, 255, 0.95); /* شفافية بسيطة جداً */
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* عشان الصورة وتحتها النص لو حبيت تضيف */
+    align-items: center;    /* لتوسيط المحتوى أفقياً */
+    justify-content: center; /* لتوسيط المحتوى رأسياً */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe1:hover, .recipe2:hover, .recipe3:hover {
+    transform: translateY(-5px); /* تأثير حركة بسيط عند الماوس */
+}
+
+/* 4. أهم تعديل: تنسيق الصور اللي "جوة" الـ line1 فقط */
+.line1 img {
+    width: 85%;      /* صورة الأكلة تاخد مساحة كويسة جوه الكرت */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+.details{
+    margin-top: 15px;
+    text-decoration: none;
+    
+    font-weight: bold;
+    background-color: #ffcc00;
+    color: #fff9f9;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.details:hover {
+    background-color: #e6b800;
+    color: #fff9f9;
+}
+footer {
+  
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+
+}
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+    color : #d4ae12;
+}
+p {
+    color: #333;
+    font-size: 18px;
+    font-style: italic;
+        margin-top: 10px;}
+</style>
+
+
 </head>
 <body>
     <header>
-    <nav>
-        <h1>Cooking Website</h1>
+    <nav class="navbar">
+
+           
+        <h1 style="  color: #ffcc00;">Cooking Website</h1>
          <button id="theme-toggle"> تبديل الوضع </button>
-        <ul>
+        <ul >
             <li><a href="index.html">Home</a></li>
             <li><a href="recipes.html">Recipes</a></li>
             <li><a href="search.html">Search</a></li>
@@ -20,11 +103,105 @@
             <li><a href="details.html">details</a></li>
             <li><a href="profile.html">profile</a></li>
         </ul>
+    
     </nav>
-</header>
-    <h1>محتوى صفحة (اسم الصفحة)</h1>
+    </header>
+    <div class="line1">
+
+        <div class="recipe1">
+            <img src="../images/chiken.jpeg" alt="recipe1">
+            <p>Chicken Recipe</p>
+            <a class="details" href="details.html#chiken">recipe Details</a>
+
+        </div>
+
+
+        <div class="recipe2">
+            <img src="../images/spaghetti.jpeg" alt="recipe2">
+            <p>Spaghetti Recipe</p>
+            <a class="details" href="details.html#spaghetti">recipe Details</a>
+
+    </div>
+    <div class="recipe3">
+        <img src="../images/fish.jpeg" alt="recipe3">
+        <p>Grilled Fish Recipe</p>
+        <a class="details" href="details.html#fish">recipe Details</a>
+    </div>
+    </div>
+        <div class="line1">
+
+        <div class="recipe1">
+            <img src="../images/burger.jpeg" alt="recipe1">
+            <p>Burger Recipe</p>
+            <a class="details" href="details.html#burger">recipe Details</a>
+
+        </div>
+
+
+        <div class="recipe2">
+            <img src="../images/kapap.jpeg" alt="recipe2">
+            <p>kapap</p>
+            <a class="details" href="details.html#kapap">recipe Details</a>
+
+    </div>
+    <div class="recipe3">
+        <img src="../images/salad.jpeg" alt="recipe3">
+        <p>Salad Recipe</p>
+        <a class="details" href="details.html#salad">recipe Details</a>
+    </div>
+    </div>
+        <div class="line1">
+
+        <div class="recipe1">
+            <img src="../images/pizza.jpeg" alt="recipe1">
+            <p>Pizza Recipe</p>
+            <a class="details" href="details.html#pizza">recipe Details</a>
+
+        </div>
+
+
+        <div class="recipe2">
+            <img src="../images/crep.jpeg" alt="recipe2">
+            <p>Crep Recipe</p>
+            <a class="details" href="details.html#crep">recipe Details</a>
+
+    </div>
+    <div class="recipe3">
+        <img src="../images/steak.jpeg" alt="recipe3">
+        <p>Grilled Steak Recipe</p>
+        <a class="details" href="details.html#steak">recipe Details</a>
+    </div>
+    </div>
     
 
-       <script src="script.js"></script>
-    </body>
+<footer >
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>Cooking Website</h3>
+            <p>اكتشف أفضل الوصفات بسهولة وابدأ رحلتك في عالم الطبخ</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="recipes.html">الوصفات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">
+            <h3>تابعنا</h3>
+            <p>فيسبوك | انستجرام | يوتيوب</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 جميع الحقوق محفوظة</p>
+    </div>
+</footer>
+         <script src="script.js"></script>
+     </body>
 </html>
