@@ -3,9 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link id="theme-link" rel="stylesheet" href="light-theme.css">
+    <link id="theme-link" rel="stylesheet" href="light-theme.css" />
 
-    <style></style>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 10px;
+        font-weight: 800;
+        font-size: 45px;
+      }
+      .section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px 20px;
+      }
+      .image {
+        width: 500px;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+        box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.6);
+      }
+      .detail-discription {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 20px;
+      }
+      .detail-title {
+        color: white;
+        background-color: rgba(30, 30, 47, 0.9);
+        border-radius: 10px;
+        padding-left: 5px;
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      footer,
+      a {
+        color: white;
+      }
+    </style>
+
     <title>Details</title>
   </head>
   <body>
@@ -26,11 +67,361 @@
       </nav>
     </header>
     <h1>Details</h1>
-    <article class="section">
-      <div class="img-content"><img src="./images/burger.jpeg" alt="burger pic" /></div>
-      <div class="detail-content"></div>
+    <article id="burger" class="section">
+      <div class="img-content">
+        <img class="image" src="./images/burger.jpeg" alt="burger pic" />
+      </div>
+      <div class="detail-content">
+        <div class="detail-title">Burger</div>
+        <div class="detail-discription">
+          <div class="datail-ingredient">
+            <h2>Ingredients:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Ground beef</li>
+              <li class="ingredient-list">Bun</li>
+              <li class="ingredient-list">Lettuce, tomato</li>
+              <li class="ingredient-list">Cheese (optional)</li>
+              <li class="ingredient-list">Salt & pepper</li>
+            </ul>
+          </div>
+          <div class="datail-steps">
+            <h2>Steps:</h2>
+            <ol class="ingredient-lists">
+              <li class="ingredient-list">
+                Season the beef with salt and pepper.
+              </li>
+              <li class="ingredient-list">
+                Shape into patties and grill or fry.
+              </li>
+              <li class="ingredient-list">Toast the bun.</li>
+              <li class="ingredient-list">Assemble with veggies and cheese.</li>
+            </ol>
+          </div>
+          <div class="datail-nutrition">
+            <h2>Nutrition:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Calories: 250–300 kcal</li>
+              <li class="ingredient-list">Protein: 17–20g</li>
+              <li class="ingredient-list">Fat: 10–15g</li>
+              <li class="ingredient-list">Carbs: 25–30g</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </article>
+    <article id="chiken" class="section">
+      <div class="img-content">
+        <img class="image" src="./images/chiken.jpeg" alt="chiken pic" />
+      </div>
+      <div class="detail-content">
+        <div class="detail-title">Chiken</div>
+        <div class="detail-discription">
+          <div class="datail-ingredient">
+            <h2>Ingredients:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Chicken breast</li>
+              <li class="ingredient-list">Olive oil</li>
+              <li class="ingredient-list">Garlic, spices</li>
+            </ul>
+          </div>
+          <div class="datail-steps">
+            <h2>Steps:</h2>
+            <ol class="ingredient-lists">
+              <li class="ingredient-list">
+                Marinate chicken with oil and spices.
+              </li>
+              <li class="ingredient-list">Grill or pan-cook until done.</li>
+            </ol>
+          </div>
+          <div class="datail-nutrition">
+            <h2>Nutrition:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Calories: 200–250 kcal</li>
+              <li class="ingredient-list">Protein: 30g</li>
+              <li class="ingredient-list">Fat: 5–8g</li>
+              <li class="ingredient-list">Carbs: 0g</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article id="crep" class="section">
+      <div class="img-content">
+        <img class="image" src="./images/crep.jpeg" alt="crep pic" />
+      </div>
+      <div class="detail-content">
+        <div class="detail-title">Crep</div>
+        <div class="detail-discription">
+          <div class="datail-ingredient">
+            <h2>Ingredients:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Flour</li>
+              <li class="ingredient-list">Milk</li>
+              <li class="ingredient-list">Eggs</li>
+              <li class="ingredient-list">Butter</li>
+            </ul>
+          </div>
+          <div class="datail-steps">
+            <h2>Steps:</h2>
+            <ol class="ingredient-lists">
+              <li class="ingredient-list">Mix ingredients into thin batter.</li>
+              <li class="ingredient-list">Cook in a pan (thin layer).</li>
+              <li class="ingredient-list">Flip and cook both sides.</li>
+            </ol>
+          </div>
+          <div class="datail-nutrition">
+            <h2>Nutrition:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Calories: 100–150 kcal</li>
+              <li class="ingredient-list">Protein: 4–6g</li>
+              <li class="ingredient-list">Fat: 3–5g</li>
+              <li class="ingredient-list">Carbs: 15–20g</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article id="fish" class="section">
+      <div class="img-content">
+        <img class="image" src="./images/fish.jpeg" alt="fish pic" />
+      </div>
+      <div class="detail-content">
+        <div class="detail-title">Fish</div>
+        <div class="detail-discription">
+          <div class="datail-ingredient">
+            <h2>Ingredients:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Fish fillet</li>
+              <li class="ingredient-list">Lemon</li>
+              <li class="ingredient-list">Garlic</li>
+              <li class="ingredient-list">Olive oil</li>
+            </ul>
+          </div>
+          <div class="datail-steps">
+            <h2>Steps:</h2>
+            <ol class="ingredient-lists">
+              <li class="ingredient-list">
+                Season fish with lemon, garlic, oil.
+              </li>
+              <li class="ingredient-list">Grill or bake until cooked.</li>
+            </ol>
+          </div>
+          <div class="datail-nutrition">
+            <h2>Nutrition:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Calories: 180–220 kcal</li>
+              <li class="ingredient-list">Protein: 22–25g</li>
+              <li class="ingredient-list">Fat: 8–10g</li>
+              <li class="ingredient-list">Carbs: 0g</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article id="kapap" class="section">
+      <div class="img-content">
+        <img class="image" src="./images/kapap.jpeg" alt="kapap pic" />
+      </div>
+      <div class="detail-content">
+        <div class="detail-title">Kapap</div>
+        <div class="detail-discription">
+          <div class="datail-ingredient">
+            <h2>Ingredients:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Ground meat</li>
+              <li class="ingredient-list">Onion</li>
+              <li class="ingredient-list">Spices</li>
+            </ul>
+          </div>
+          <div class="datail-steps">
+            <h2>Steps:</h2>
+            <ol class="ingredient-lists">
+              <li class="ingredient-list">Mix meat with onion and spices.</li>
+              <li class="ingredient-list">Shape onto skewers.</li>
+              <li class="ingredient-list">Grill until cooked.</li>
+            </ol>
+          </div>
+          <div class="datail-nutrition">
+            <h2>Nutrition:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Calories: 250–300 kcal</li>
+              <li class="ingredient-list">Protein: 20–25g</li>
+              <li class="ingredient-list">Fat: 15–20g</li>
+              <li class="ingredient-list"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article id="pizza" class="section">
+      <div class="img-content">
+        <img class="image" src="./images/pizza.jpeg" alt="pizza pic" />
+      </div>
+      <div class="detail-content">
+        <div class="detail-title">Pizza</div>
+        <div class="detail-discription">
+          <div class="datail-ingredient">
+            <h2>Ingredients:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Dough</li>
+              <li class="ingredient-list">Tomato sauce</li>
+              <li class="ingredient-list">Cheese</li>
+              <li class="ingredient-list">Toppings</li>
+            </ul>
+          </div>
+          <div class="datail-steps">
+            <h2>Steps:</h2>
+            <ol class="ingredient-lists">
+              <li class="ingredient-list">Roll dough.</li>
+              <li class="ingredient-list">Add sauce and toppings.</li>
+              <li class="ingredient-list">Bake in oven.</li>
+            </ol>
+          </div>
+          <div class="datail-nutrition">
+            <h2>Nutrition:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Calories: 250–300 kcal</li>
+              <li class="ingredient-list">Protein: 10–12g</li>
+              <li class="ingredient-list">Fat: 10–12g</li>
+              <li class="ingredient-list">Carbs: 30–35g</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article id="salad" class="section">
+      <div class="img-content">
+        <img class="image" src="./images/salad.jpeg" alt="salad pic" />
+      </div>
+      <div class="detail-content">
+        <div class="detail-title">Salad</div>
+        <div class="detail-discription">
+          <div class="datail-ingredient">
+            <h2>Ingredients:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Lettuce</li>
+              <li class="ingredient-list">Tomato</li>
+              <li class="ingredient-list">Cucumber</li>
+              <li class="ingredient-list">Olive oil</li>
+            </ul>
+          </div>
+          <div class="datail-steps">
+            <h2>Steps:</h2>
+            <ol class="ingredient-lists">
+              <li class="ingredient-list">Chop vegetables.</li>
+              <li class="ingredient-list">Mix with dressing.</li>
+            </ol>
+          </div>
+          <div class="datail-nutrition">
+            <h2>Nutrition:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Calories: 80–120 kcal</li>
+              <li class="ingredient-list">Protein: 2–3g</li>
+              <li class="ingredient-list">Fat: 5–7g</li>
+              <li class="ingredient-list">Carbs: 10–12g</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article id="spaghetti" class="section">
+      <div class="img-content">
+        <img class="image" src="./images/Spaghetti.jpeg" alt="spaghettie pic" />
+      </div>
+      <div class="detail-content">
+        <div class="detail-title">spaghettie</div>
+        <div class="detail-discription">
+          <div class="datail-ingredient">
+            <h2>Ingredients:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Pasta</li>
+              <li class="ingredient-list">Tomato sauce</li>
+              <li class="ingredient-list">Garlic</li>
+            </ul>
+          </div>
+          <div class="datail-steps">
+            <h2>Steps:</h2>
+            <ol class="ingredient-lists">
+              <li class="ingredient-list">Boil pasta.</li>
+              <li class="ingredient-list">Prepare sauce.</li>
+              <li class="ingredient-list">Mix together.</li>
+            </ol>
+          </div>
+          <div class="datail-nutrition">
+            <h2>Nutrition:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Calories: 300–350 kcal</li>
+              <li class="ingredient-list">Protein: 10–12g</li>
+              <li class="ingredient-list">Fat: 5–8g</li>
+              <li class="ingredient-list">Carbs: 50–60g</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article id="steak" class="section">
+      <div class="img-content">
+        <img class="image" src="./images/steak.jpeg" alt="steak pic" />
+      </div>
+      <div class="detail-content">
+        <div class="detail-title">Steak</div>
+        <div class="detail-discription">
+          <div class="datail-ingredient">
+            <h2>Ingredients:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Beef steak</li>
+              <li class="ingredient-list">Salt & pepper</li>
+              <li class="ingredient-list">Butter</li>
+            </ul>
+          </div>
+          <div class="datail-steps">
+            <h2>Steps:</h2>
+            <ol class="ingredient-lists">
+              <li class="ingredient-list">Season steak.</li>
+              <li class="ingredient-list">Cook in pan or grill.</li>
+              <li class="ingredient-list">Rest before serving.</li>
+            </ol>
+          </div>
+          <div class="datail-nutrition">
+            <h2>Nutrition:</h2>
+            <ul class="ingredient-lists">
+              <li class="ingredient-list">Calories: 250–350 kcal</li>
+              <li class="ingredient-list">Protein: 25–30g</li>
+              <li class="ingredient-list">Fat: 15–20g</li>
+              <li class="ingredient-list">Carbs: 0g</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Cooking Website</h3>
+          <p>
+            Discover the best recipes easily and start your culinary journey.
+          </p>
+        </div>
 
+        <div class="footer-box">
+          <h3>َQuick Links</h3>
+          <ul>
+            <li><a href="index.html">Main</a></li>
+            <li><a href="recipes.html">Recipe</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-box">
+          <h3>Follow Us</h3>
+          <p>Facebook | instgram | Youtube</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 جميع الحقوق محفوظة</p>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
