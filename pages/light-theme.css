@@ -124,7 +124,7 @@ nav ul li a.active {
     }
 }
 
-body {     background: url("images/a.jpeg") no-repeat center center fixed; 
+body {     background: url("../images/a.jpeg") no-repeat center center fixed; 
            background-size: cover;
            min-height: 100vh;}
 footer {
