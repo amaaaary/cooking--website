@@ -59,7 +59,7 @@ nav ul li a.active {
 }
 
 .welcome-box {
-    width:100%;
+    width:50%;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 12px;
     text-align: center;
