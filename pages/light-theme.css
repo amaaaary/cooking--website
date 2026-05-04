@@ -57,7 +57,71 @@ nav ul li a.active {
     cursor: pointer;
     border-radius: 5px;
 }
+.welcome { text-align: center; color: #ffcc00; border: solid rgba(255, 255, 255, 0.2) ;
+ width: 50%; border-radius: 5%;
+   margin-left: 25%; margin-right: auto; font-size: 20px; background-color:rgba(255, 255, 255, 0.2) ;
+}
+section {
+    background-color: #2c2c2c;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 2px solid #ffcc00;
+    margin-top: 30px;
+}
 
+section h3 {
+    color: #ffcc00;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+form input[type="email"] {
+    padding: 12px 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: white;
+    width: 60%;
+    outline: none;
+}
+
+form input[type="email"]:focus {
+    border-color: #ffcc00;
+}
+
+form button[type="submit"] {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+   
+}
+
+form button[type="submit"]:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+        align-items: center;
+    }
+    form input[type="email"] {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
 
 body {     background: url("../images/a.jpeg") no-repeat center center fixed; 
            background-size: cover;
