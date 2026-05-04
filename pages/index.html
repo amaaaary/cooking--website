@@ -2,8 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>معرض السيارات - (اكتب اسم الصفحة هنا)</title>
+    <title> Cooking</title>
     <link id="theme-link" rel="stylesheet" href="light-theme.css">
+    
 </head>
 <body>
     <header>
@@ -27,15 +28,33 @@
         <p id="pa">اكتشف أشهى الوصفات التي تناسبك</p>
        <!--<button id="but1">تصفح الوصفات</button>-->
     </div>
-    <section>
+    <section class="feature">
+    <div class="feature111">
+        <div class="icon">🍳</div>
+        <h3>وصفات سهلة</h3>
+        <p>بنشرح لك الطبخة خطوة بخطوة عشان تطلع محترف.</p>
+    </div>
+
+    <div class="feature111">
+        <div class="icon">⏱️</div>
+        <h3>توفير وقت</h3>
+        <p>وصفات سريعة التحضير لليوم المشحون والمذاكرة.</p>
+    </div>
+
+    <div class="feature111">
+        <div class="icon">🥗</div>
+        <h3>أكل صحي</h3>
+        <p>بدائل صحية ومناسبة لكل أنواع الدايت.</p>
+    </div>
+</section>
+    <section id="q">
     <h3>انضم إلينا ليصلك جديد الوصفات</h3>
-    <form>
+    <form id="z">
         <input type="email" placeholder="بريدك الإلكتروني">
         <button type="submit">اشتراك</button>
     </form>
 </section>
-  
-    <footer >
+    <footer>
     <div class="footer-container">
 
         <div class="footer-box">
@@ -62,8 +81,19 @@
     <div class="footer-bottom">
         <p>© 2026 جميع الحقوق محفوظة</p>
     </div>
+</footer>
+  <script>
+    const joinForm = document.querySelector('#z');
 
-    
+    joinForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const emailInput = document.querySelector('#z input[type="email"]').value;
+        localStorage.setItem('userEmail', emailInput);
+        
+        window.location.href = "login.html"; 
+    });
+</script>  
 
        <script src="script.js"></script>
     </body>
