@@ -177,5 +177,48 @@
     
 
          <script src="script.js"></script>
+    <script>
+    // 1. تحديد العناصر التي سنعمل عليها
+    const searchInput = document.getElementById('search');
+    const searchBtn = document.querySelector('.search-btn');
+
+    // 2. وظيفة البحث والانتقال
+    function performSearch() {
+        // أخذ النص المكتوب وتحويله لحروف صغيرة وحذف المسافات الزائدة
+        const query = searchInput.value.toLowerCase().trim();
+
+        if (query === "") {
+            alert("من فضلك اكتب اسم الوصفة أولاً!");
+            return;
+        }
+
+        // قائمة الوصفات المتاحة بناءً على صورك
+        const recipes = [
+            "pizza", "crep", "steak", 
+            "burger", "kapap", "salad", 
+            "chicken", "spaghetti", "fish"
+        ];
+
+        // البحث عن تطابق (سواء كتب المستخدم الكلمة كاملة أو جزء منها)
+        const match = recipes.find(recipe => query.includes(recipe));
+
+        if (match) {
+            // الانتقال لصفحة التفاصيل مع إرسال اسم الوصفة في الرابط
+            window.location.href = `details.html?recipe=${match}`;
+        } else {
+            alert("عذراً، هذه الوصفة غير موجودة حالياً. جرب البحث عن (Pizza, Burger, or Chicken)");
+        }
+    }
+
+    // 3. تشغيل البحث عند الضغط على الزر
+    searchBtn.addEventListener('click', performSearch);
+
+    // 4. تشغيل البحث عند الضغط على زر Enter في لوحة المفاتيح
+    searchInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            performSearch();
+        }
+    });
+</script>
 </body>
 </html>
