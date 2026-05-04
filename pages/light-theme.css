@@ -126,9 +126,17 @@ form button[type="submit"]:hover {
 body {     background: url("../images/a.jpeg") no-repeat center center fixed; 
            background-size: cover;
            min-height: 100vh;}
-footer { background-color:rgba(30, 30, 47, 0.9);
-        text-align: center;
-        bottom: 0;
-        width: 100%; 
-        padding: 10px; 
-        margin-top: auto;}
+footer {
+  
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+
+}
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+    color : #d4ae12;
