@@ -58,7 +58,7 @@ nav ul li a.active {
     border-radius: 5px;
 }
 
-.welcome-box {
+.welcome {
     width:50%;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 12px;
@@ -71,7 +71,7 @@ nav ul li a.active {
     border-radius: 12px;
 }
 
-.welcome-box h1 {
+.welcome h1 {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px 40px;
     border: 2px solid #ff4d4d;
@@ -79,7 +79,7 @@ nav ul li a.active {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.welcome-box p {
+.welcome p {
     color: #ddd;
 }
 body {     background: url("../images/a.jpeg") no-repeat center center fixed; 
