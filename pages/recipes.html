@@ -9,40 +9,37 @@
 
 
 <style>
-/* 1. تنسيق صورة الخلفية فقط - عشان متأثرش على باقي الصور */
 
-
-/* 2. حاوية الجريد الأساسية */
 .line1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
-    width: 90%; /* يفضل نسبة مئوية عشان الـ Responsiveness */
+    width: 90%;
     max-width: 1200px;
-    margin: 50px auto; /* لتوسيط الحاوية في نص الصفحة */
+    margin: 50px auto; 
     padding: 20px;
 }
 
-/* 3. تنسيق الكروت (الـ Divs البيضاء) */
+
 .recipe1, .recipe2, .recipe3 {
-    background-color: rgba(255, 255, 255, 0.95); /* شفافية بسيطة جداً */
+    background-color: rgba(255, 255, 255, 0.95); 
     height: 350px;
     border-radius: 20px;
     display: flex;
-    flex-direction: column; /* عشان الصورة وتحتها النص لو حبيت تضيف */
-    align-items: center;    /* لتوسيط المحتوى أفقياً */
-    justify-content: center; /* لتوسيط المحتوى رأسياً */
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
 .recipe1:hover, .recipe2:hover, .recipe3:hover {
-    transform: translateY(-5px); /* تأثير حركة بسيط عند الماوس */
+    transform: translateY(-5px); 
 }
 
-/* 4. أهم تعديل: تنسيق الصور اللي "جوة" الـ line1 فقط */
+
 .line1 img {
-    width: 85%;      /* صورة الأكلة تاخد مساحة كويسة جوه الكرت */
+    width: 85%;     
     height: 200px;
     object-fit: cover;
     border-radius: 15px;
