@@ -178,6 +178,54 @@ p {
         <p> © جميع الحقوق محفوظة2026</p>
     </div>
 </footer>
+      <script>     const themeBtn = document.querySelector('button');
+const contactForm = document.querySelector('form');
+const body = document.body;
+
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+    body.classList.add(currentTheme);
+}
+
+themeBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    const theme = body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
+    localStorage.setItem('theme', theme);
+});
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const fullName = document.getElementById('username').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        let errors = [];
+
+        if (fullName.length < 3) {
+            errors.push("Full Name must be at least 3 characters.");
+        }
+
+        if (!emailRegex.test(email)) {
+            errors.push("Please enter a valid email address.");
+        }
+
+        if (message.length < 10) {
+            errors.push("Message must be at least 10 characters.");
+        }
+
+        if (errors.length > 0) {
+            alert(errors.join("\n"));
+        } else {
+            alert("Success! Your message has been sent.");
+            sessionStorage.setItem('formSubmitted', 'true');
+            contactForm.reset();
+        }
+    });
+}
+</script>
 
     <script src="script.js"></script>
 </body>
