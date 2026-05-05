@@ -11,21 +11,20 @@
 
 
 <style>
-/* التنسيقات الداخلية (Internal CSS) */
+
         
-        /* 1. ضبط الجسم ليكون Flexbox لدفع الفوتر للأسفل */
+       
         body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             margin: 0;
             font-family: 'Arial', sans-serif;
-            /* التأكد من وجود الخلفية لو لم تكن موجودة في الملف الخارجي */
+    
         
    
         }
 
-        /* 2. حاوية المحتوى تأخذ كل المساحة المتاحة وتدفع الفوتر */
         .main-content {
             flex: 1;
             display: flex;
@@ -34,21 +33,21 @@
             padding: 40px 20px;
         }
 
-        /* 3. تصميم صندوق البحث */
+    
         .search-container {
 
             padding: 50px 30px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
      
-            border: 1px solid rgba(255, 204, 0, 0.3); /* إطار أصفر خفيف */
+            border: 1px solid rgba(255, 204, 0, 0.3); 
             max-width: 600px;
             width: 100%;
             text-align: center;
         }
 
         .search-container h1 {
-            color: #ffcc00; /* اللون الأصفر الذي تستخدمه في الموقع */
+            color: #ffcc00; 
             margin-bottom: 30px;
             font-size: 28px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -56,12 +55,12 @@
 
         .search-wrapper {
             display: flex;
-            gap: 0; /* لجعل الزر والمدخل متصلين */
+            gap: 0; 
             background: white;
             padding: 5px;
-            border-radius: 50px; /* شكل بيضاوي عصري */
-            overflow: hidden;/* لإخفاء أي تجاوزات */
-             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* ظل خفيف للصندوق */
+            border-radius: 50px; 
+            overflow: hidden;
+             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
         }
 
         #search {
@@ -91,20 +90,19 @@
             transform: scale(1.02);
         }
 
-        /* 4. التأكد من تنسيق الفوتر */
         footer {
             background-color: rgba(30, 30, 47, 0.95);
             color: white;
             text-align: center;
             padding: 20px 0;
             width: 100%;
-            margin-top: auto; /* زيادة تأكيد الدفع للأسفل */
+            margin-top: auto; 
         }
         
         .footer-container {
             display: flex;
-            justify-content: space-around;/* توزيع الصناديق بالتساوي */
-            flex-wrap: wrap;/* السماح بالالتفاف في الشاشات الصغيرة */
+            justify-content: space-around;
+            flex-wrap: wrap;
             padding-bottom: 15px;
         }
         
@@ -143,7 +141,6 @@
 
 
 
-    <!-- الجزء الخاص بالمحتوى -->
     <div class="main-content">
         <div class="search-container">
             <h1>أهلاً بك في مطبخك.. ابحث عن وصفة</h1>
@@ -154,7 +151,6 @@
         </div>
     </div>
 
-    <!-- الفوتر الخاص بك مع التنسيقات المطلوبة -->
     <footer>
         <div class="footer-container">
             <div class="footer-box">
@@ -178,42 +174,41 @@
 
          <script src="script.js"></script>
     <script>
-    // 1. تحديد العناصر التي سنعمل عليها
+       
     const searchInput = document.getElementById('search');
     const searchBtn = document.querySelector('.search-btn');
 
-    // 2. وظيفة البحث والانتقال
+     
     function performSearch() {
-        // أخذ النص المكتوب وتحويله لحروف صغيرة وحذف المسافات الزائدة
+      
         const query = searchInput.value.toLowerCase().trim();
 
         if (query === "") {
             alert("من فضلك اكتب اسم الوصفة أولاً!");
             return;
         }
+        
 
-        // قائمة الوصفات المتاحة بناءً على صورك
         const recipes = [
             "pizza", "crep", "steak", 
             "burger", "kapap", "salad", 
             "chicken", "spaghetti", "fish"
         ];
 
-        // البحث عن تطابق (سواء كتب المستخدم الكلمة كاملة أو جزء منها)
+        
         const match = recipes.find(recipe => query.includes(recipe));
 
         if (match) {
-            // الانتقال لصفحة التفاصيل مع إرسال اسم الوصفة في الرابط
+            
             window.location.href = `details.html?recipe=${match}`;
         } else {
             alert("عذراً، هذه الوصفة غير موجودة حالياً. جرب البحث عن (Pizza, Burger, or Chicken)");
         }
     }
 
-    // 3. تشغيل البحث عند الضغط على الزر
+    
     searchBtn.addEventListener('click', performSearch);
 
-    // 4. تشغيل البحث عند الضغط على زر Enter في لوحة المفاتيح
     searchInput.addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
             performSearch();
